@@ -1,10 +1,14 @@
-package com.example.stormhacks2021;
+package com.example.stormhacks2021.tips;
 
 import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.stormhacks2021.HomeActivity;
+import com.example.stormhacks2021.MapActivity;
+import com.example.stormhacks2021.MessageActivity;
+import com.example.stormhacks2021.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class TipsActivity extends AppCompatActivity {

@@ -5,6 +5,7 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.stormhacks2021.tips.TipsActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MapActivity extends AppCompatActivity {
