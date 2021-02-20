@@ -12,11 +12,25 @@ import com.example.stormhacks2021.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class TipsActivity extends AppCompatActivity {
+    private String[] tips = {};
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
+        setContentView(R.layout.activity_tips);
 
+        setNavigationView();
+
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+    }
+
+
+    private void setNavigationView() {
         // Bottom navigation bar
         BottomNavigationView bottomNavigationView = findViewById(R.id.navigation_bar);
         // Select current activity
@@ -41,6 +55,5 @@ public class TipsActivity extends AppCompatActivity {
             }
             return true;
         });
-
     }
 }
