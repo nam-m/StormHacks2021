@@ -1,17 +1,21 @@
 package com.example.stormhacks2021;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MessageActivity extends AppCompatActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
+        setContentView(R.layout.activity_message);
 
         // Bottom navigation bar
         BottomNavigationView bottomNavigationView = findViewById(R.id.navigation_bar);
@@ -38,5 +42,15 @@ public class MessageActivity extends AppCompatActivity {
             return true;
         });
 
+        setAddButton();
+    }
+
+    private void setAddButton() {
+        Button addBtn = findViewById(R.id.addUser);
+        addBtn.setOnClickListener(item ->{
+            Intent intent = new Intent(MessageActivity.this,NewUserActivity.class);
+            startActivity(intent);
+            finish();
+        });
     }
 }
