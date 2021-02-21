@@ -10,7 +10,6 @@
         <item>@string/tip_7</item>
         <item>@string/tip_8</item>
         <item>@string/tip_9</item>
-        <item>@string/tip_10</item>
     </string-array>
     
     <string name="tip_1">
@@ -20,12 +19,12 @@
     </string>
 
     <string name="tip_2">
-        Stay active.\n\nStaying active is as good for the brain as it is for the body.
+        Staying active is as good for the brain as it is for the body.
         Regular exercise or activity can have a major impact on your mental and emotional health,
         relieve stress, improve memory, and help you sleep better.\n\nIf you\'re self-isolating or the usual place you exercise is closed,
         there are many ways you can keep fit at home such as climbing the stairs
-        or following free tutorials through Youtube.\n\nIf you are not self-isolating, it is still recommended to stretch your legs
-        outside while maintaining a safe social distance of two metres from others.
+        or following Youtube tutorials.\n\nIf you\'re not self-isolating, you can still stretch your legs
+        outside while maintaining a safe distance of 2 metres from others.
     </string>
 
     <string name='tip_3'>Take up a relaxation practice.\n\nYoga, mindfulness, meditation and deep breathing can help reduce overall levels of stress.\n\n<a href="https://keltymentalhealth.ca/breathr">The Breathr App from Kelty Mental Health</a>
@@ -39,34 +38,26 @@
 
     <string name='tip_5'>Limit how often you check the news and only get news from reliable sources.\n\nIt\'s easy to get sucked in to
         reading constant updates on social media, this can be mentally draining as well as putting you at risk of seeing false information.\n\nA better way to stay informed
-        is by checking out credible sources once or twice a day for updates. Some reliable sources include:\n\n<a href="http://www.bccdc.ca/health-info/diseases-conditions/covid-19">\t\u2022 BC Centre for Disease Control</a>\n\n<a href="https://www.who.int">\t\u2022 The World Health Organization</a>\n\n<a href="https://www.canada.ca/en/public-health/services/diseases/coronavirus-disease-covid-19.html">\t\u2022 HealthCanada</a>\n\nRemember the information absorb can affect how we feel. We should monitor what we read with care.
+        is by checking out credible sources once or twice a day for updates. Remember the information absorb can affect how we feel. We should monitor what we read with care.
     </string>
 
     <string name='tip_6'>Don\'t skimp on sleep.\n\nIt matters more than you think. One way to get sleep better is to take a break from the
         stimulation of screens — TV, phones, tablets or computers — in the two hours before bedtime.
     </string>
 
-    <string name='tip_7'>Coping with substance use issues.\n\nThose who are struggling with substance use issues might find
+    <string name='tip_7'>Those who are struggling with substance use issues might find
         stressful times particularly difficult.\n\nTo stay in recovery ensure you continue to identify high-risk situations that
         may put you most at risk for using, such as spending time around others who are using. If you usually feel triggered by stress,
         try using the self-care activities outlined here to manage this stress as best you can.\n\nAlso, don\'t forget to ask for
         support from people around you if you\'re finding this time particularly challenging.
     </string>
 
-    <string name='tip_8'>Where to get more help.\n\nIf you or a loved one needs more mental health support at this difficult time,
-        there are many programs and resources that are available to you:\n\n<a href="https://www.heretohelp.bc.ca/"> \t\u2022 Here to Help</a>
-        provides mental-health and substance-use information you can trust.\n\n<a href="https://keltymentalhealth.ca/">\t\u2022 Kelty Mental Health Centre</a>
-        has information on talking to children and youth.\n\n<a href="https://crisiscentre.bc.ca/">\t\u2022 BC Crisis Centre</a>
-        is a non-profit, volunteer organization committed to helping people help themselves and others deal with crisis.\n\n<a href="https://cmha.bc.ca/">\t\u2022 Canadian Mental Health Association"</a>
-        is a national charity that helps maintain and improve mental health for all Canadians
-    </string>
-
-    <string name='tip_9'>Focus on positive thoughts.\n\nChoose to focus on the positive things in your life,
+    <string name='tip_8'>Focus on positive thoughts.\n\nChoose to focus on the positive things in your life,
         instead of dwelling on how bad you feel. \n\nConsider starting each day by listing things you are thankful for.\n\nMaintain
         a sense of hope, work to accept changes as they occur and try to keep problems in perspective.
     </string>
 
-    <string name='tip_10'>Set priorities.\n\nDon\'t become overwhelmed by creating a life-changing list of things to achieve while you\'re home.\n\nSet
+    <string name='tip_9'>Set priorities.\n\nDon\'t become overwhelmed by creating a life-changing list of things to achieve while you\'re home.\n\nSet
         reasonable goals each day and outline steps you can take to reach those goals. Give yourself credit for every step in the right direction,
         no matter how small. And recognize that some days will be better than others.
     </string>
