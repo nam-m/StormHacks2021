@@ -22,6 +22,7 @@ public class NewUserActivity extends AppCompatActivity {
 
     private FirebaseDatabase db = FirebaseDatabase.getInstance();
     private DatabaseReference root = db.getReference().child("Users");
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,19 +37,19 @@ public class NewUserActivity extends AppCompatActivity {
             switch (item.getItemId()) {
                 case R.id.search:
                     startActivity(new Intent(getApplicationContext(), MapActivity.class));
-                    overridePendingTransition(0,0);
+                    overridePendingTransition(0, 0);
                     return true;
                 case R.id.tips:
                     startActivity(new Intent(getApplicationContext(), TipsActivity.class));
-                    overridePendingTransition(0,0);
+                    overridePendingTransition(0, 0);
                     return true;
                 case R.id.home:
                     startActivity(new Intent(getApplicationContext(), HomeActivity.class));
-                    overridePendingTransition(0,0);
+                    overridePendingTransition(0, 0);
                     return true;
                 case R.id.message:
                     startActivity(new Intent(getApplicationContext(), MessageActivity.class));
-                    overridePendingTransition(0,0);
+                    overridePendingTransition(0, 0);
                     return true;
             }
             return true;
@@ -66,7 +67,7 @@ public class NewUserActivity extends AppCompatActivity {
                 String email = mEmail.getText().toString();
                 String interests = mInterests.getText().toString();
 
-                HashMap<String , String> userMap = new HashMap<>();
+                HashMap<String, String> userMap = new HashMap<>();
                 userMap.put("name", name);
                 userMap.put("email", email);
                 userMap.put("interests", interests);

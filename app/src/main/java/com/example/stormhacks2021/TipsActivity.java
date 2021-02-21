@@ -53,7 +53,7 @@ public class TipsActivity extends AppCompatActivity {
 
                 tipsTextView.setText(tips.get(index));
 
-                if (fwdBtn.getVisibility() == View.INVISIBLE){
+                if (fwdBtn.getVisibility() == View.INVISIBLE) {
                     fwdBtn.setVisibility(View.VISIBLE);
                 }
 
@@ -75,7 +75,7 @@ public class TipsActivity extends AppCompatActivity {
 
                 tipsTextView.setText(tips.get(index));
 
-                if (backBtn.getVisibility() == View.INVISIBLE){
+                if (backBtn.getVisibility() == View.INVISIBLE) {
                     backBtn.setVisibility(View.VISIBLE);
                 }
 

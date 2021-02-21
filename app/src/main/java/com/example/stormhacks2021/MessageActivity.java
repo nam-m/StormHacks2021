@@ -45,15 +45,15 @@ public class MessageActivity extends AppCompatActivity {
             switch (item.getItemId()) {
                 case R.id.search:
                     startActivity(new Intent(getApplicationContext(), MapActivity.class));
-                    overridePendingTransition(0,0);
+                    overridePendingTransition(0, 0);
                     return true;
                 case R.id.tips:
                     startActivity(new Intent(getApplicationContext(), TipsActivity.class));
-                    overridePendingTransition(0,0);
+                    overridePendingTransition(0, 0);
                     return true;
                 case R.id.home:
                     startActivity(new Intent(getApplicationContext(), HomeActivity.class));
-                    overridePendingTransition(0,0);
+                    overridePendingTransition(0, 0);
                     return true;
                 case R.id.message:
                     return true;
@@ -67,7 +67,7 @@ public class MessageActivity extends AppCompatActivity {
 
         list = new ArrayList<>();
         setRecyclerOnClick();
-        adapter = new MyAdapter(this, list,listener);
+        adapter = new MyAdapter(this, list, listener);
         recyclerView.setAdapter(adapter);
 
         root.addValueEventListener(new ValueEventListener() {
@@ -102,8 +102,8 @@ public class MessageActivity extends AppCompatActivity {
 
     private void setListeners() {
         FloatingActionButton addBtn = findViewById(R.id.addUser);
-        addBtn.setOnClickListener(item ->{
-            Intent intent = new Intent(MessageActivity.this,NewUserActivity.class);
+        addBtn.setOnClickListener(item -> {
+            Intent intent = new Intent(MessageActivity.this, NewUserActivity.class);
             startActivity(intent);
             finish();
         });

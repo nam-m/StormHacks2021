@@ -17,7 +17,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     Context context;
     RecyclerViewClickListener listener;
 
-    public MyAdapter(Context context, ArrayList<UserModel> mList, RecyclerViewClickListener listener){
+    public MyAdapter(Context context, ArrayList<UserModel> mList, RecyclerViewClickListener listener) {
         this.mList = mList;
         this.context = context;
         this.listener = listener;
@@ -43,13 +43,14 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         return mList.size();
     }
 
-    public interface RecyclerViewClickListener{
+    public interface RecyclerViewClickListener {
         void onClick(View v, int position);
     }
 
-    public class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+    public class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         TextView name, email, interests;
-        public MyViewHolder(@NonNull View itemView){
+
+        public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             itemView.setOnClickListener(this);
             name = itemView.findViewById(R.id.name_text);

@@ -17,7 +17,7 @@ public class MessageUserActivity extends AppCompatActivity {
 
         Bundle extras = getIntent().getExtras();
         String name = "Not set";
-        if(extras != null){
+        if (extras != null) {
             name = extras.getString("name");
         }
 
@@ -32,15 +32,15 @@ public class MessageUserActivity extends AppCompatActivity {
             switch (item.getItemId()) {
                 case R.id.search:
                     startActivity(new Intent(getApplicationContext(), MapActivity.class));
-                    overridePendingTransition(0,0);
+                    overridePendingTransition(0, 0);
                     return true;
                 case R.id.tips:
                     startActivity(new Intent(getApplicationContext(), TipsActivity.class));
-                    overridePendingTransition(0,0);
+                    overridePendingTransition(0, 0);
                     return true;
                 case R.id.home:
                     startActivity(new Intent(getApplicationContext(), HomeActivity.class));
-                    overridePendingTransition(0,0);
+                    overridePendingTransition(0, 0);
                     return true;
                 case R.id.message:
                     return true;
