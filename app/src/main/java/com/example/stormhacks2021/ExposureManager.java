@@ -2,10 +2,9 @@ package com.example.stormhacks2021;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.ListIterator;
 
 public class ExposureManager {
-    private List<Covidexposures> exposures;
+    private List<Exposure> exposures;
     private static ExposureManager instance;
 
     private ExposureManager(){
@@ -19,5 +18,8 @@ public class ExposureManager {
         return instance;
     }
 
-    public List<Covidexposures> getList() {return  exposures;}
+    public List<Exposure> getList() {return  exposures;}
+    public void setExposures(List<Exposure> exposures) {
+        this.exposures = exposures;
+    }
 }

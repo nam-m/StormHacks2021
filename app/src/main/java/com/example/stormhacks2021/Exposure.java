@@ -2,14 +2,14 @@ package com.example.stormhacks2021;
 
 import java.time.LocalDate;
 
-public class Covidexposures {
+public class Exposure {
 
     private String place;
     private String address;
     private String city;
     private LocalDate date;
 
-    public Covidexposures(String place, String address, String city, LocalDate date) {
+    public Exposure(String place, String address, String city, LocalDate date) {
         this.place = place;
         this.address = address;
         this.city = city;
