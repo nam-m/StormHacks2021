@@ -12,5 +12,7 @@
         Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
         Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     </string>
+    <string name="back_tips_btn">back_tips_btn</string>
+    <string name="forward_tips_btn">forward_tips_btn</string>
 
 </resources>
