@@ -22,11 +22,10 @@ import java.util.Objects;
 public class GetNearbyPlaces extends AsyncTask<Object, Void, String>{
     private String googlePlacesData;
     private GoogleMap mMap;
-    private String url;
 
     protected String doInBackground(Object... objects){
         mMap = (GoogleMap)objects[0];
-        url = (String) objects[1];
+        String url = (String) objects[1];
 
         try {
             googlePlacesData = downloadUrl(url);
@@ -54,7 +53,7 @@ public class GetNearbyPlaces extends AsyncTask<Object, Void, String>{
 
             double lat = Double.parseDouble(googlePlace.get("lat"));
             double lng = Double.parseDouble(googlePlace.get("lng"));
-            double rating = Double.parseDouble(googlePlace.get("rating"));
+            //double rating = Double.parseDouble(googlePlace.get("rating"));
             String placeName = googlePlace.get("name");
 
             Log.d("Search locations", "name: " + placeName);
@@ -62,7 +61,7 @@ public class GetNearbyPlaces extends AsyncTask<Object, Void, String>{
             LatLng latLng = new LatLng(lat, lng);
             markerOptions.position(latLng);
             markerOptions.title(placeName);
-            markerOptions.snippet("Rating: " + String.valueOf(rating));
+            //markerOptions.snippet("Rating: " + rating);
             markerOptions.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED));
 
             mMap.addMarker(markerOptions);
@@ -84,9 +83,7 @@ public class GetNearbyPlaces extends AsyncTask<Object, Void, String>{
         }
         String data = builder.toString();
         reader.close();
-        Log.d("Download URL", "Returning data = " + data);
+        //Log.d("Download URL", "Returning data = " + data);
         return data;
     }
 }
-
-

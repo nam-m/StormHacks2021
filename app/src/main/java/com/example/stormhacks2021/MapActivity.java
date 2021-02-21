@@ -23,6 +23,7 @@ import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.MapView;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.CameraPosition;
@@ -44,7 +45,6 @@ import java.util.List;
 
 public class MapActivity extends AppCompatActivity implements OnMapReadyCallback {
 
-    private static final String TAG = MapActivity.class.getSimpleName();
     private static final int LOCATION_PERMISSION_REQUEST_CODE = 1234;
     private GoogleMap mMap;
     private CameraPosition cameraPosition;
@@ -55,7 +55,6 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
     // The entry point to the Fused Location Provider.
     private FusedLocationProviderClient mFusedLocationProviderClient;
     private boolean locationPermissionGranted = false;
-    private LocationRequest mLocationRequest;
 
     // Set default location when location permission is denied
     //private final LatLng defaultLocation = new LatLng(49.18790481219052, -122.84227226820386);
@@ -94,16 +93,13 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         placesClient = Places.createClient(this);
 
         mFusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
-
-        exposure = ExposureManager.getInstance();
         //Create Map Fragment
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
-
+        exposure = ExposureManager.getInstance();
         getLocationPermission();
         navBar();
-
     }
 
     private void navBar() {
@@ -146,58 +142,16 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
     public void onMapReady(GoogleMap googleMap) {
         this.mMap = googleMap;
 
-//        this.map.setInfoWindowAdapter(new GoogleMap.InfoWindowAdapter() {
-//
-//            @Override
-//            // Return null here, so that getInfoContents() is called next.
-//            public View getInfoWindow(Marker arg0) {
-//                return null;
-//            }
-//
-//            @Override
-//            public View getInfoContents(Marker marker) {
-//                // Inflate the layouts for the info window, title and snippet.
-//                View infoWindow = getLayoutInflater().inflate(R.layout.custom_info_contents,
-//                        (FrameLayout) findViewById(R.id.map), false);
-//
-//                TextView title = infoWindow.findViewById(R.id.title);
-//                title.setText(marker.getTitle());
-//
-//                TextView snippet = infoWindow.findViewById(R.id.snippet);
-//                snippet.setText(marker.getSnippet());
-//
-//                return infoWindow;
-//            }
-//        });
-//
         // Prompt the user for permission.
         getLocationPermission();
         // [END_EXCLUDE]
-
         // Turn on the My Location layer and the related control on the map.
         updateLocationUI();
 
         // Get the current location of the device and set the position of the map.
         getDeviceLocation();
-//
-//        //Show current location;
-//        showCurrentPlace();
     }
 
-//    public void onMapReady(GoogleMap googleMap) {
-//        mMap = googleMap;
-//        googleMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
-//        googleMap.getUiSettings().setZoomControlsEnabled(true);
-//        googleMap.getUiSettings().setZoomGesturesEnabled(true);
-//        googleMap.getUiSettings().setCompassEnabled(true);
-//        if (mLocationPermissionsGranted) {
-//            getDeviceLocation();
-//            if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED || ActivityCompat.checkSelfPermission(this,
-//                    Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
-//                googleMap.setMyLocationEnabled(true);
-//            }
-//        }
-//    }
 
     private void initialMap() {
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
@@ -231,48 +185,6 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
             Log.e("Exception: %s", e.getMessage(), e);
         }
     }
-/*
-    private void showCurrentPlace() {
-        if (mMap == null) {
-            return;
-        }
-
-        if (locationPermissionGranted) {
-            // Use fields to define the data types to return.
-            List<Place.Field> placeFields = Arrays.asList(Place.Field.NAME, Place.Field.ADDRESS,
-                    Place.Field.LAT_LNG);
-
-            // Use the builder to create a FindCurrentPlaceRequest.
-            FindCurrentPlaceRequest request =
-                    FindCurrentPlaceRequest.newInstance(placeFields);
-
-            // Get the likely places - that is, the businesses and other points of interest that
-            // are the best match for the device's current location.
-            if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-                // TODO: Consider calling
-                //    ActivityCompat#requestPermissions
-                // here to request the missing permissions, and then overriding
-                //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-                //                                          int[] grantResults)
-                // to handle the case where the user grants the permission. See the documentation
-                // for ActivityCompat#requestPermissions for more details.
-                return;
-            }
-            MarkerOptions markerOptions = new MarkerOptions();
-            map.addMarker(markerOptions);
-        }
-        else {
-            // The user has not granted permission.
-            Log.i(TAG, "The user did not grant location permission.");
-
-            // Add a default marker, because the user hasn't selected a place.
-            map.addMarker(new MarkerOptions()
-                    .position(defaultLocation));
-
-            // Prompt the user for permission.
-            getLocationPermission();
-        }
-    }*/
 
     private void getLocationPermission() {
         /*
@@ -362,5 +274,25 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
 //        GetNearbyPlaces getNearbyPlaces = new GetNearbyPlaces();
 //        getNearbyPlaces.execute(dataTransfer);
         new GetNearbyPlaces().execute(dataTransfer);
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+    }
+
+    @Override
+    public void onLowMemory() {
+        super.onLowMemory();
     }
 }
