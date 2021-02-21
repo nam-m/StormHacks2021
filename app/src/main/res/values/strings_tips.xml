@@ -10,6 +10,7 @@
         <item>@string/tip_7</item>
         <item>@string/tip_8</item>
         <item>@string/tip_9</item>
+        <item>@string/tip_10</item>
     </string-array>
     
     <string name="tip_1">
@@ -27,8 +28,10 @@
         outside while maintaining a safe distance of 2 metres from others.
     </string>
 
-    <string name='tip_3'>Take up a relaxation practice.\n\nYoga, mindfulness, meditation and deep breathing can help reduce overall levels of stress.\n\n<a href="https://keltymentalhealth.ca/breathr">The Breathr App from Kelty Mental Health</a>
-        is a good resource to get started on mindfulness meditation.
+    <string name='tip_3'>Relax and recharge.\n\nSet aside time for yourself. Even a few minutes of quiet time can be refreshing
+        and help to quiet your mind and reduce anxiety.\n\nMany people benefit from practices such as deep breathing, tai chi,
+        yoga or meditation. \n\nSoak in a bubble bath, listen to music, or read or listen to a book — whatever helps you relax.\n\nSelect
+        a technique that works for you and practice it regularly.
     </string>
 
     <string name='tip_4'>Eat a brain-healthy diet to support strong mental health.\n\nFoods that can support your mood include fatty fish rich in omega-3s,
@@ -58,8 +61,13 @@
     </string>
 
     <string name='tip_9'>Set priorities.\n\nDon\'t become overwhelmed by creating a life-changing list of things to achieve while you\'re home.\n\nSet
-        reasonable goals each day and outline steps you can take to reach those goals. Give yourself credit for every step in the right direction,
+        reasonable goals each day and outline steps you can take to reach those goals.\n\nGive yourself credit for every step in the right direction,
         no matter how small. And recognize that some days will be better than others.
+    </string>
+
+    <string name='tip_10'>Do something for others.\n\nFind purpose in helping the people around you. For example, email, text or call to check on your friends,
+        family members and neighbors — especially those who are elderly.\n\nIf you know someone who can\'t get out, ask if there\'s something needed, such
+        as groceries or a prescription picked up, for instance. \n\nBut be sure to follow government recommendations on social distancing and group meetings.
     </string>
 
 
