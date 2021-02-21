@@ -59,7 +59,7 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
 
     // Set default location when location permission is denied
     //private final LatLng defaultLocation = new LatLng(49.18790481219052, -122.84227226820386);
-    private static final int DEFAULT_ZOOM = 10;
+    private static final int DEFAULT_ZOOM = 12;
     private static final String FINE_LOCATION = Manifest.permission.ACCESS_FINE_LOCATION;
     private static final String COURSE_LOCATION = Manifest.permission.ACCESS_COARSE_LOCATION;
     private static final int PERMISSIONS_REQUEST_ACCESS_FINE_LOCATION = 1;
@@ -73,7 +73,10 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
     private static final String KEY_CAMERA_POSITION = "camera_position";
     private static final String KEY_LOCATION = "location";
     private boolean mLocationPermissionsGranted = false;
-    // [END maps_current_place_state_keys]
+
+    private static ExposureManager exposure;
+    // keyword will be passed in to Maps Static URL to search for nearby places
+    private static String keyword = "restaurants";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -92,6 +95,7 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
 
         mFusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
 
+        exposure = ExposureManager.getInstance();
         //Create Map Fragment
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
@@ -139,9 +143,9 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
     }
 
     @Override
-//    public void onMapReady(GoogleMap googleMap) {
-//        this.map = map;
-//
+    public void onMapReady(GoogleMap googleMap) {
+        this.mMap = googleMap;
+
 //        this.map.setInfoWindowAdapter(new GoogleMap.InfoWindowAdapter() {
 //
 //            @Override
@@ -166,38 +170,34 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
 //            }
 //        });
 //
-//        // Prompt the user for permission.
-//        getLocationPermission();
-//        // [END_EXCLUDE]
-//
-//        // Turn on the My Location layer and the related control on the map.
-//        updateLocationUI();
-//
-//        // Get the current location of the device and set the position of the map.
-//        getDeviceLocation();
+        // Prompt the user for permission.
+        getLocationPermission();
+        // [END_EXCLUDE]
+
+        // Turn on the My Location layer and the related control on the map.
+        updateLocationUI();
+
+        // Get the current location of the device and set the position of the map.
+        getDeviceLocation();
 //
 //        //Show current location;
 //        showCurrentPlace();
-//    }
-
-    public void onMapReady(GoogleMap googleMap) {
-        mMap = googleMap;
-        googleMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
-        googleMap.getUiSettings().setZoomControlsEnabled(true);
-        googleMap.getUiSettings().setZoomGesturesEnabled(true);
-        googleMap.getUiSettings().setCompassEnabled(true);
-        if (mLocationPermissionsGranted) {
-            getDeviceLocation();
-            if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED || ActivityCompat.checkSelfPermission(this,
-                    Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
-                googleMap.setMyLocationEnabled(true);
-            }
-        }
-        /*
-        googleMap.addMarker(new MarkerOptions()
-                .position(defaultLocation)
-                .title("Default Location"));*/
     }
+
+//    public void onMapReady(GoogleMap googleMap) {
+//        mMap = googleMap;
+//        googleMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+//        googleMap.getUiSettings().setZoomControlsEnabled(true);
+//        googleMap.getUiSettings().setZoomGesturesEnabled(true);
+//        googleMap.getUiSettings().setCompassEnabled(true);
+//        if (mLocationPermissionsGranted) {
+//            getDeviceLocation();
+//            if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED || ActivityCompat.checkSelfPermission(this,
+//                    Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
+//                googleMap.setMyLocationEnabled(true);
+//            }
+//        }
+//    }
 
     private void initialMap() {
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
@@ -219,10 +219,10 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
                 location.addOnCompleteListener(task -> {
                     if(task.isSuccessful()){
                         Location currentLocation = (Location) task.getResult();
-
                         if(currentLocation != null) {
                             mMap.moveCamera(CameraUpdateFactory.newLatLng(new LatLng(currentLocation.getLatitude(), currentLocation.getLongitude())));
-                            mMap.animateCamera(CameraUpdateFactory.zoomTo(13f));
+                            mMap.animateCamera(CameraUpdateFactory.zoomTo(DEFAULT_ZOOM));
+                            getNearbyPlaces(keyword, currentLocation);
                         }
                     }
                 });
@@ -337,5 +337,30 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         } catch (SecurityException e)  {
             Log.e("Exception: %s", e.getMessage());
         }
+    }
+
+    private void getNearbyPlaces(String keyword, Location location) {
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append("https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=");
+        stringBuilder.append(location.getLatitude());
+        stringBuilder.append(",");
+        stringBuilder.append(location.getLongitude());
+        stringBuilder.append("&radius=15000"); //radius = 15km
+        stringBuilder.append("&keyword=");
+        stringBuilder.append(keyword);
+        stringBuilder.append("&key=");
+        stringBuilder.append(getResources().getString(R.string.mapsApiKey));
+
+        String url = stringBuilder.toString();
+        Log.d("MapsActivity", "url= " + url);
+        // Execute place task method
+//                new PlaceTask().execute(url);
+        Object[] dataTransfer = new Object[2];
+        dataTransfer[0] = mMap;
+        dataTransfer[1] = url;
+
+//        GetNearbyPlaces getNearbyPlaces = new GetNearbyPlaces();
+//        getNearbyPlaces.execute(dataTransfer);
+        new GetNearbyPlaces().execute(dataTransfer);
     }
 }
