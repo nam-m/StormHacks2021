@@ -69,7 +69,7 @@ public class HomeActivity extends AppCompatActivity {
             while ((line = reader.readLine()) != null){
                 String[] attributes = line.split(",");
                 DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyyMMdd");
-                LocalDate date = LocalDate.parse(attributes[3],formatter);
+                LocalDate date = LocalDate.parse(attributes[attributes.length-1],formatter);
                 Exposure exposure = new Exposure(attributes[0],attributes[1],attributes[2],date);
                 nexposures.add(exposure);
             }
