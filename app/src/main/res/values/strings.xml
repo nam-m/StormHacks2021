@@ -6,5 +6,6 @@
     <string name="message">Message</string>
     <string name="profile">Profile</string>
     <string name="tips">Tips</string>
+    <string name="option_get_place">Get location</string>
 
 </resources>
