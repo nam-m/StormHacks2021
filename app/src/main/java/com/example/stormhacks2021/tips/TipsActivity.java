@@ -1,7 +1,10 @@
 package com.example.stormhacks2021.tips;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.text.method.LinkMovementMethod;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,8 +14,13 @@ import com.example.stormhacks2021.MessageActivity;
 import com.example.stormhacks2021.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Random;
+
 public class TipsActivity extends AppCompatActivity {
-    private String[] tips = {};
+    private List<String> tips = new ArrayList<String>();
 
 
     @Override
@@ -21,7 +29,10 @@ public class TipsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_tips);
 
         setNavigationView();
+        tips = Arrays.asList(getResources().getStringArray(R.array.tips));
 
+        TextView tipsTextView = findViewById(R.id.tip_TextView);
+        tipsTextView.setText(tips.get(new Random().nextInt(tips.size())));
     }
 
     @Override

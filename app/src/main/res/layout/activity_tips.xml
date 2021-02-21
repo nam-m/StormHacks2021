@@ -19,4 +19,22 @@
         app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/menu_navigation" />
 
+    <TextView
+        android:id="@+id/tip_TextView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:autoLink="web"
+        android:gravity="center_horizontal|fill_horizontal"
+        android:lineSpacingExtra="8sp"
+        android:linksClickable="true"
+        android:text="@string/tips_textview"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/navigation_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
