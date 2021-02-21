@@ -1,20 +1,13 @@
-package com.example.stormhacks2021.tips;
+package com.example.stormhacks2021;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
-import android.text.method.LinkMovementMethod;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.stormhacks2021.HomeActivity;
-import com.example.stormhacks2021.MapActivity;
-import com.example.stormhacks2021.MessageActivity;
-import com.example.stormhacks2021.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -39,7 +32,7 @@ public class TipsActivity extends AppCompatActivity {
 
         TextView tipsTextView = findViewById(R.id.tip_TextView);
         tipsTextView.setText(tips.get(index));
-        
+
         FloatingActionButton backBtn = findViewById(R.id.fab_tips_back);
         FloatingActionButton fwdBtn = findViewById(R.id.fab_tips_forward);
 

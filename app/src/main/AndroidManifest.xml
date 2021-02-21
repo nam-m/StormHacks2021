@@ -35,7 +35,7 @@
         <activity android:name=".MessageActivity">
         </activity>
 
-        <activity android:name=".tips.TipsActivity">
+        <activity android:name=".TipsActivity">
         </activity>
 
     </application>
