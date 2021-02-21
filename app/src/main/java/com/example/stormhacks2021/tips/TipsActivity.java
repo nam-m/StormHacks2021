@@ -39,8 +39,7 @@ public class TipsActivity extends AppCompatActivity {
 
         TextView tipsTextView = findViewById(R.id.tip_TextView);
         tipsTextView.setText(tips.get(index));
-        tipsTextView.setMovementMethod(LinkMovementMethod.getInstance());
-
+        
         FloatingActionButton backBtn = findViewById(R.id.fab_tips_back);
         FloatingActionButton fwdBtn = findViewById(R.id.fab_tips_forward);
 
