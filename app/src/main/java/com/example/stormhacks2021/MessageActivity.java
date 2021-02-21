@@ -3,6 +3,7 @@ package com.example.stormhacks2021;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -23,6 +24,7 @@ import java.util.ArrayList;
 
 public class MessageActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
+    private MyAdapter.RecyclerViewClickListener listener;
     private FirebaseDatabase db = FirebaseDatabase.getInstance();
     private DatabaseReference root = db.getReference().child("Users");
     private MyAdapter adapter;
@@ -63,8 +65,8 @@ public class MessageActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         list = new ArrayList<>();
-        adapter = new MyAdapter(this, list);
-
+        setRecyclerOnClick();
+        adapter = new MyAdapter(this, list,listener);
         recyclerView.setAdapter(adapter);
 
         root.addValueEventListener(new ValueEventListener() {
@@ -83,10 +85,21 @@ public class MessageActivity extends AppCompatActivity {
 
             }
         });
-        setAddButton();
+        setListeners();
     }
 
-    private void setAddButton() {
+    private void setRecyclerOnClick() {
+        listener = new MyAdapter.RecyclerViewClickListener() {
+            @Override
+            public void onClick(View v, int position) {
+                Intent intent = new Intent(getApplicationContext(), MessageUserActivity.class);
+                intent.putExtra("name", list.get(position).getName());
+                startActivity(intent);
+            }
+        };
+    }
+
+    private void setListeners() {
         Button addBtn = findViewById(R.id.addUser);
         addBtn.setOnClickListener(item ->{
             Intent intent = new Intent(MessageActivity.this,NewUserActivity.class);
