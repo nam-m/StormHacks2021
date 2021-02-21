@@ -14,14 +14,13 @@
     </string-array>
     
     <string name="tip_1">
-        You don\'t have to be face-to-face to check in on a friend of loved one,
-        and keeping up social connection is particularly important during stressful times.
-        Phone calls and social networks are a great stress-busting,
+        Continue to make social connection a priority.\n\nYou don\'t have to be face-to-face to check in on a friend of loved one,
+        and keeping up social connection is particularly important during stressful times.\n\nPhone calls and social networks are a great stress-busting,
         mood-boosting way to spend time with the people you love.
     </string>
 
     <string name="tip_2">
-        Staying active is as good for the brain as it is for the body.
+        Stay active.\n\nStaying active is as good for the brain as it is for the body.
         Regular exercise or activity can have a major impact on your mental and emotional health,
         relieve stress, improve memory, and help you sleep better.\n\nIf you\'re self-isolating or the usual place you exercise is closed,
         there are many ways you can keep fit at home such as climbing the stairs
@@ -29,47 +28,46 @@
         outside while maintaining a safe social distance of two metres from others.
     </string>
 
-    <string name='tip_3'>Yoga, mindfulness, meditation and deep breathing can help reduce overall levels of stress.\n\n<a href="https://keltymentalhealth.ca/breathr">The Breathr App from Kelty Mental Health</a>
+    <string name='tip_3'>Take up a relaxation practice.\n\nYoga, mindfulness, meditation and deep breathing can help reduce overall levels of stress.\n\n<a href="https://keltymentalhealth.ca/breathr">The Breathr App from Kelty Mental Health</a>
         is a good resource to get started on mindfulness meditation.
     </string>
 
-    <string name='tip_4'>
-        Foods that can support your mood include fatty fish rich in omega-3s,
+    <string name='tip_4'>Eat a brain-healthy diet to support strong mental health.\n\nFoods that can support your mood include fatty fish rich in omega-3s,
         nuts (walnuts, almonds, cashews and peanuts), avocados, beans,
         leafy greens (spinach, kale and Brussels sprouts), and fresh fruit such as blueberries.
     </string>
 
-    <string name='tip_5'>It\'s easy to get sucked in to reading constant updates on social media, this can be mentally draining as well as putting you at risk of seeing false information.\n\nA better way to stay informed is by checking out credible sources once or twice a day for updates.
-        Some reliable sources include:\n\n<a href="http://www.bccdc.ca/health-info/diseases-conditions/covid-19">BC Centre for Disease Control</a>\n\n<a href="https://www.who.int">The World Health Organization</a>\n\n<a href="https://www.canada.ca/en/public-health/services/diseases/coronavirus-disease-covid-19.html">Health Canada</a>\n\nRemember, the information absorb can affect how we feel. We should monitor what we read with care.
+    <string name='tip_5'>Limit how often you check the news and only get news from reliable sources.\n\nIt\'s easy to get sucked in to
+        reading constant updates on social media, this can be mentally draining as well as putting you at risk of seeing false information.\n\nA better way to stay informed is by checking out credible sources once or twice a day for updates.
+        Some reliable sources include:\n\n<a href="http://www.bccdc.ca/health-info/diseases-conditions/covid-19">\u2022BC Centre for Disease Control</a>\n\n<a href="https://www.who.int">\u2022The World Health Organization</a>\n\n<a href="https://www.canada.ca/en/public-health/services/diseases/coronavirus-disease-covid-19.html">\u2022Health Canada</a>\n\nRemember, the information absorb can affect how we feel. We should monitor what we read with care.
     </string>
 
-    <string name='tip_6'>
-        It matters more than you think. One way to get sleep better is to take a break from the
+    <string name='tip_6'>Don\'t skimp on sleep.\n\nIt matters more than you think. One way to get sleep better is to take a break from the
         stimulation of screens — TV, phones, tablets or computers — in the two hours before bedtime.
     </string>
 
-    <string name='tip_7'>
-        Those who are struggling with substance use issues might find stressful times particularly difficult.\n\nTo stay in recovery ensure you continue to identify high-risk situations that may put you most at risk for using,
-        such as spending time around others who are using. If you usually feel triggered by stress,
-        try using the self-care activities outlined here to manage this stress as best you can.\n\nAlso, don\'t forget to ask for support from people around you if you\'re finding this time particularly challenging.
+    <string name='tip_7'>Coping with substance use issues.\n\nThose who are struggling with substance use issues might find
+        stressful times particularly difficult.\n\nTo stay in recovery ensure you continue to identify high-risk situations that
+        may put you most at risk for using, such as spending time around others who are using. If you usually feel triggered by stress,
+        try using the self-care activities outlined here to manage this stress as best you can.\n\nAlso, don\'t forget to ask for
+        support from people around you if you\'re finding this time particularly challenging.
     </string>
 
-    <string name='tip_8'>If you or a loved one needs more mental health support at this difficult time, there are many programs and resources that are available to you:\n\n<a href="https://www.heretohelp.bc.ca/">Here to Help</a>
-        provides mental-health and substance-use information you can trust.\n\n<a href="https://keltymentalhealth.ca/">Kelty Mental Health Centre</a>
-        has information on talking to children and youth.\n\n<a href="https://crisiscentre.bc.ca/">BC Crisis Centre</a>
-        is a non-profit, volunteer organization committed to helping people help themselves and others deal with crisis.\n\n<a href="https://cmha.bc.ca/">Canadian Mental Health Association"</a>
+    <string name='tip_8'>Where to get more help.\n\nIf you or a loved one needs more mental health support at this difficult time,
+        there are many programs and resources that are available to you:\n\n<a href="https://www.heretohelp.bc.ca/">Here to Help</a>
+        provides mental-health and substance-use information you can trust.\n\n<a href="https://keltymentalhealth.ca/">\u2022Kelty Mental Health Centre</a>
+        has information on talking to children and youth.\n\n<a href="https://crisiscentre.bc.ca/">\u2022BC Crisis Centre</a>
+        is a non-profit, volunteer organization committed to helping people help themselves and others deal with crisis.\n\n<a href="https://cmha.bc.ca/">\u2022Canadian Mental Health Association"</a>
         is a national charity that helps maintain and improve mental health for all Canadians
     </string>
 
-    <string name='tip_9'>
-        Focus on positive thoughts. Choose to focus on the positive things in your life, instead of dwelling on how bad you feel.
-        Consider starting each day by listing things you are thankful for. Maintain a sense of hope, work to accept changes as
-        they occur and try to keep problems in perspective.
+    <string name='tip_9'>Focus on positive thoughts.\n\nChoose to focus on the positive things in your life,
+        instead of dwelling on how bad you feel. \n\nConsider starting each day by listing things you are thankful for.\n\nMaintain
+        a sense of hope, work to accept changes as they occur and try to keep problems in perspective.
     </string>
 
-    <string name='tip_10'>
-        Set priorities. Don\'t become overwhelmed by creating a life-changing list of things to achieve while you\'re home. Set reasonable goals
-        each day and outline steps you can take to reach those goals. Give yourself credit for every step in the right direction,
+    <string name='tip_10'>Set priorities.\n\nDon\'t become overwhelmed by creating a life-changing list of things to achieve while you\'re home.\n\nSet
+        reasonable goals each day and outline steps you can take to reach those goals. Give yourself credit for every step in the right direction,
         no matter how small. And recognize that some days will be better than others.
     </string>
 

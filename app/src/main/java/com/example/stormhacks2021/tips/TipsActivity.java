@@ -20,7 +20,6 @@ import java.util.List;
 import java.util.Random;
 
 public class TipsActivity extends AppCompatActivity {
-    private List<String> tips = new ArrayList<String>();
 
 
     @Override
@@ -29,10 +28,12 @@ public class TipsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_tips);
 
         setNavigationView();
-        tips = Arrays.asList(getResources().getStringArray(R.array.tips));
+        List<String> tips = Arrays.asList(getResources().getStringArray(R.array.tips));
+
+        int index = new Random().nextInt(tips.size());
 
         TextView tipsTextView = findViewById(R.id.tip_TextView);
-        tipsTextView.setText(tips.get(new Random().nextInt(tips.size())));
+        tipsTextView.setText(tips.get(index));
     }
 
     @Override
