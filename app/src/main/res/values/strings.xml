@@ -14,5 +14,6 @@
     </string>
     <string name="back_tips_btn">back_tips_btn</string>
     <string name="forward_tips_btn">forward_tips_btn</string>
+    <string name="option_get_place">Get location</string>
 
 </resources>
