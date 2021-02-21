@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="tips">
+        <item>@string/tip_1</item>
+        <item>@string/tip_2</item>
+        <item>@string/tip_3</item>
+        <item>@string/tip_4</item>
+        <item>@string/tip_5</item>
+        <item>@string/tip_6</item>
+        <item>@string/tip_7</item>
+        <item>@string/tip_8</item>
+        <item>@string/tip_9</item>
+        <item>@string/tip_10</item>
+    </string-array>
+
+    <string name="tip_1">
+        Continue to make social connection a priority.\n\nYou don\'t have to be face-to-face to check in on a friend of loved one,
+        and keeping up social connection is particularly important during stressful times.\n\nPhone calls and social networks are a great stress-busting,
+        mood-boosting way to spend time with the people you love.
+    </string>
+
+    <string name="tip_2">
+        Staying active is as good for the brain as it is for the body.
+        Regular exercise or activity can have a major impact on your mental and emotional health,
+        relieve stress, improve memory, and help you sleep better.\n\nIf you\'re self-isolating or the usual place you exercise is closed,
+        there are many ways you can keep fit at home such as climbing the stairs
+        or following Youtube tutorials.\n\nIf you\'re not self-isolating, you can still stretch your legs
+        outside while maintaining a safe distance of 2 metres from others.
+    </string>
+
+    <string name='tip_3'>Relax and recharge.\n\nSet aside time for yourself. Even a few minutes of quiet time can be refreshing
+        and help to quiet your mind and reduce anxiety.\n\nMany people benefit from practices such as deep breathing, tai chi,
+        yoga or meditation. \n\nSoak in a bubble bath, listen to music, or read or listen to a book — whatever helps you relax.\n\nSelect
+        a technique that works for you and practice it regularly.
+    </string>
+
+    <string name='tip_4'>Eat a brain-healthy diet to support strong mental health.\n\nFoods that can support your mood include fatty fish rich in omega-3s,
+        nuts (walnuts, almonds, cashews and peanuts), avocados, beans,
+        leafy greens (spinach, kale and Brussels sprouts), and fresh fruit such as blueberries.
+    </string>
+
+    <string name='tip_5'>Limit how often you check the news and only get news from reliable sources.\n\nIt\'s easy to get sucked in to
+        reading constant updates on social media, this can be mentally draining as well as putting you at risk of seeing false information.\n\nA better way to stay informed
+        is by checking out credible sources once or twice a day for updates. Remember the information absorb can affect how we feel. We should monitor what we read with care.
+    </string>
+
+    <string name='tip_6'>Don\'t skimp on sleep.\n\nIt matters more than you think. One way to get sleep better is to take a break from the
+        stimulation of screens — TV, phones, tablets or computers — in the two hours before bedtime.
+    </string>
+
+    <string name='tip_7'>Those who are struggling with substance use issues might find
+        stressful times particularly difficult.\n\nTo stay in recovery ensure you continue to identify high-risk situations that
+        may put you most at risk for using, such as spending time around others who are using. If you usually feel triggered by stress,
+        try using the self-care activities outlined here to manage this stress as best you can.\n\nAlso, don\'t forget to ask for
+        support from people around you if you\'re finding this time particularly challenging.
+    </string>
+
+    <string name='tip_8'>Focus on positive thoughts.\n\nChoose to focus on the positive things in your life,
+        instead of dwelling on how bad you feel. \n\nConsider starting each day by listing things you are thankful for.\n\nMaintain
+        a sense of hope, work to accept changes as they occur and try to keep problems in perspective.
+    </string>
+
+    <string name='tip_9'>Set priorities.\n\nDon\'t become overwhelmed by creating a life-changing list of things to achieve while you\'re home.\n\nSet
+        reasonable goals each day and outline steps you can take to reach those goals.\n\nGive yourself credit for every step in the right direction,
+        no matter how small. And recognize that some days will be better than others.
+    </string>
+
+    <string name='tip_10'>Do something for others.\n\nFind purpose in helping the people around you. For example, email, text or call to check on your friends,
+        family members and neighbors — especially those who are elderly.\n\nIf you know someone who can\'t get out, ask if there\'s something needed, such
+        as groceries or a prescription picked up, for instance. \n\nBut be sure to follow government recommendations on social distancing and group meetings.
+    </string>
+
+
+</resources>
