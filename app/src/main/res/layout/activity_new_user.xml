@@ -6,4 +6,58 @@
     android:layout_height="match_parent"
     tools:context=".NewUserActivity">
 
+    <EditText
+        android:id="@+id/nameEditText"
+        android:layout_width="280dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="65dp"
+        android:layout_marginTop="136dp"
+        android:layout_marginEnd="66dp"
+        android:ems="10"
+        android:hint="Enter Name"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/emailEditText"
+        android:layout_width="283dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="63dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginEnd="65dp"
+        android:ems="10"
+        android:hint="Enter Email"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameEditText" />
+
+    <EditText
+        android:id="@+id/interestsEditText"
+        android:layout_width="281dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="62dp"
+        android:layout_marginTop="41dp"
+        android:layout_marginEnd="68dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="Enter Some Interests"
+        android:inputType="textMultiLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailEditText" />
+
+    <Button
+        android:id="@+id/submitBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="149dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="169dp"
+        android:text="Submit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/interestsEditText" />
 </androidx.constraintlayout.widget.ConstraintLayout>
