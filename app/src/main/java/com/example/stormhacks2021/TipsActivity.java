@@ -57,12 +57,6 @@ public class TipsActivity extends AppCompatActivity {
         });
     }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-    }
-
-
     private void setNavigationView() {
         // Bottom navigation bar
         BottomNavigationView bottomNavigationView = findViewById(R.id.navigation_bar);
@@ -73,15 +67,15 @@ public class TipsActivity extends AppCompatActivity {
             switch (item.getItemId()) {
                 case R.id.search:
                     startActivity(new Intent(getApplicationContext(), MapActivity.class));
-                    overridePendingTransition(0,0);
+                    overridePendingTransition(0, 0);
                     return true;
                 case R.id.home:
                     startActivity(new Intent(getApplicationContext(), HomeActivity.class));
-                    overridePendingTransition(0,0);
+                    overridePendingTransition(0, 0);
                     return true;
                 case R.id.message:
                     startActivity(new Intent(getApplicationContext(), MessageActivity.class));
-                    overridePendingTransition(0,0);
+                    overridePendingTransition(0, 0);
                     return true;
                 case R.id.tips:
                     return true;

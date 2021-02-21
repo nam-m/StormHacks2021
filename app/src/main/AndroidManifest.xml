@@ -20,22 +20,30 @@
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="${MAPS_API_KEY}" />
+            android:value="" />
 
         <activity android:name=".HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
         <activity android:name=".MapActivity">
+
         </activity>
 
         <activity android:name=".MessageActivity">
+
+        </activity>
+
+        <activity android:name=".NewUserActivity">
+
         </activity>
 
         <activity android:name=".TipsActivity">
+
         </activity>
 
     </application>

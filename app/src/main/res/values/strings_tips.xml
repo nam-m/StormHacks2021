@@ -12,7 +12,7 @@
         <item>@string/tip_9</item>
         <item>@string/tip_10</item>
     </string-array>
-    
+
     <string name="tip_1">
         Continue to make social connection a priority.\n\nYou don\'t have to be face-to-face to check in on a friend of loved one,
         and keeping up social connection is particularly important during stressful times.\n\nPhone calls and social networks are a great stress-busting,
@@ -69,7 +69,6 @@
         family members and neighbors — especially those who are elderly.\n\nIf you know someone who can\'t get out, ask if there\'s something needed, such
         as groceries or a prescription picked up, for instance. \n\nBut be sure to follow government recommendations on social distancing and group meetings.
     </string>
-
 
 
 </resources>
