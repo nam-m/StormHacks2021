@@ -36,13 +36,33 @@ public class TipsActivity extends AppCompatActivity {
         FloatingActionButton backBtn = findViewById(R.id.fab_tips_back);
         FloatingActionButton fwdBtn = findViewById(R.id.fab_tips_forward);
 
+        if (index == 0) {
+            backBtn.setVisibility(View.INVISIBLE);
+        }
+
+        if (index == tips.size() - 1) {
+            fwdBtn.setVisibility(View.INVISIBLE);
+        }
+
         backBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (index > 0) {
                     index--;
                 }
+
                 tipsTextView.setText(tips.get(index));
+
+                if (fwdBtn.getVisibility() == View.INVISIBLE){
+                    fwdBtn.setVisibility(View.VISIBLE);
+                }
+
+                if (index == 0) {
+                    backBtn.setVisibility(View.INVISIBLE);
+                }
+
+                fwdBtn.invalidate();
+
             }
         });
 
@@ -52,7 +72,19 @@ public class TipsActivity extends AppCompatActivity {
                 if (index < tips.size() - 1) {
                     index++;
                 }
+
                 tipsTextView.setText(tips.get(index));
+
+                if (backBtn.getVisibility() == View.INVISIBLE){
+                    backBtn.setVisibility(View.VISIBLE);
+                }
+
+                if (index == tips.size() - 1) {
+                    fwdBtn.setVisibility(View.INVISIBLE);
+                }
+
+                backBtn.invalidate();
+
             }
         });
     }
