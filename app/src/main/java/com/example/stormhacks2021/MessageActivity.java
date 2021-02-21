@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -100,7 +101,7 @@ public class MessageActivity extends AppCompatActivity {
     }
 
     private void setListeners() {
-        Button addBtn = findViewById(R.id.addUser);
+        FloatingActionButton addBtn = findViewById(R.id.addUser);
         addBtn.setOnClickListener(item ->{
             Intent intent = new Intent(MessageActivity.this,NewUserActivity.class);
             startActivity(intent);

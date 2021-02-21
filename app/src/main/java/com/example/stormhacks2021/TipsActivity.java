@@ -11,7 +11,7 @@ public class TipsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
+        setContentView(R.layout.activity_tips);
 
         // Bottom navigation bar
         BottomNavigationView bottomNavigationView = findViewById(R.id.navigation_bar);
